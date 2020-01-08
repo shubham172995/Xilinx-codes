@@ -1,0 +1,23 @@
+connect
+
+targets #(Select PL)
+
+fpga <Path of bitstream>
+
+targets #(PSU)
+
+source <Path of psu_init.tcl>
+
+psu_init
+
+psu_ps_pl_isolation_removal
+
+psu_ps_pl_reset_config
+
+targets #(Select Processor, eg. in my case, I created Application Project for Cortex-A53 when I created C project in SDK)
+
+rst -processor
+
+dow <Path of elf of application project>
+
+con
